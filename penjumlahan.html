@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operasi Penjumlahan</title>
+</head>
+<body>
+    <h1>Penjumlahan Bilangan</h1>
+    
+    <label for="bilangan1">Bilangan Pertama:</label>
+    <input type="number" id="bilangan1">
+    
+    <label for="bilangan2">Bilangan Kedua:</label>
+    <input type="number" id="bilangan2">
+    
+    <div>
+        <button onclick="penjumlahan()">Jumlahkan</button>
+        <button onclick="ulang()">Ulang</button>
+    </div>
+
+    <script>
+        function penjumlahan() {
+            // Mendapatkan nilai dari input bilangan pertama dan kedua
+            var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+            var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+            
+            // Melakukan operasi penjumlahan
+            var hasil = bilangan1 + bilangan2;
+            
+            // Menampilkan hasil dalam alert
+            alert("Hasil Penjumlahan: " + hasil);
+        }
+
+        function ulang() {
+            // Mengosongkan input dan hasil
+            document.getElementById("bilangan1").value = "";
+            document.getElementById("bilangan2").value = "";
+            document.getElementById("hasil").textContent = "";
+        }
+    </script>
+</body>
+</html>

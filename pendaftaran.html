@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pendaftaran</h1>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" >
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var alamat = document.getElementById("alamat").value;
+
+            if (nama === "" || email === "" || alamat === "") {
+                alert("Anda harus mengisi data dengan lengkap.");
+                return false;
+            }
+             // Jika semua input telah diisi, tampilkan pesan terima kasih
+             alert("Terima kasih, Anda sudah terdaftar.");
+            return true;
+        }
+    </script>
+</body>
+</html>
